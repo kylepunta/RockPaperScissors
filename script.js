@@ -22,7 +22,13 @@ console.log(getComputerChoice()); // returns computerChoice into the console
 
 function playRound(computerSelection, playerSelection){
 
-    let result;
-
-    
 }
+
+let playerSelection = prompt("Rock, Paper, or Scissors?");
+let computerSelection = getComputerChoice();
+
+while (playerSelection.toLowerCase() === computerSelection.toLowerCase()){
+    playerSelection = prompt("Play again: ");
+    computerSelection = getComputerChoice();
+}
+
