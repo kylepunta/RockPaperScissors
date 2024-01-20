@@ -18,8 +18,6 @@ function getComputerChoice(){
     return computerChoice; // computerChoice's string value is returned
 }
 
-console.log(getComputerChoice()); // returns computerChoice into the console
-
 function playRound(computerSelection, playerSelection){
 
     let result;
@@ -59,14 +57,25 @@ function playRound(computerSelection, playerSelection){
         }
     }
 
+    return result;
 }
 
 let playGame = prompt("Would you like to play Rock, Paper, Scissors?");
+let playAgain = "";
+let playerSelection = "";
+let computerSelection = "";
+
 if (playGame.toLowerCase() === "yes"){
 
-    playerSelection = prompt("Rock, Paper, or Scissors?");
-    computerSelection = getComputerChoice();
-    
+    do {
+        playerSelection = prompt("Rock, Paper, or Scissors?");
+        computerSelection = getComputerChoice();
+
+        console.log(playRound(computerSelection, playerSelection));
+
+        playAgain = prompt("Would you like to play again?");
+    }
+    while (playAgain.toLowerCase() === "yes");
 }
 
 
