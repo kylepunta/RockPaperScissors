@@ -88,10 +88,8 @@ let playerScore = 0;
 
 if (playGame.toLowerCase() === "yes"){
 
-    do {
-        game();
-    }
-    while (playAgain.toLowerCase() === "yes");
+    game();
+    
 }
 
 
