@@ -11,11 +11,11 @@ function getComputerChoice(){
         randomNumber = Math.floor((Math.random() * 10) + 1);
     }
 
-    if (randomNumber === rock){
+    if (randomNumber === 1){
         computerChoice = "rock"; // computerChoice is assigned rock 
-    } else if (randomNumber === paper){
+    } else if (randomNumber === 2){
         computerChoice = "paper"; // computerChoice is assigned paper
-    } else if (randomNumber === scissors){
+    } else if (randomNumber === 3){
         computerChoice = "scissors"; // computerChoice is assigned scissors
     }
 
