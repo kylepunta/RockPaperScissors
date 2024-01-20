@@ -19,3 +19,10 @@ function getComputerChoice(){
 }
 
 console.log(getComputerChoice()); // returns computerChoice into the console
+
+function playRound(computerSelection, playerSelection){
+
+    let result;
+
+    
+}
