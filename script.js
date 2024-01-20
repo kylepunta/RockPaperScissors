@@ -74,8 +74,7 @@ function game(){
     console.log("You choose " + playerSelection);
     console.log("Computer chooses " + computerSelection);
     console.log(playRound(computerSelection, playerSelection));
-
-    playAgain = prompt("Would you like to play again?");
+    console.log("Computer " + computerScore + ": Player " + playerScore);
 
 }
 
@@ -88,8 +87,17 @@ let playerScore = 0;
 
 if (playGame.toLowerCase() === "yes"){
 
-    game();
-    
+    do {
+        game();
+    }
+    while (computerScore != 3 && playerScore != 3);
+
+    if (computerScore > playerScore){
+        console.log("Computer wins " + computerScore + "-" + playerScore);
+    }
+    else if (playerScore > computerScore){
+        console.log("Player wins " + playerScore + "-" + computerScore);
+    }
 }
 
 
