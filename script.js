@@ -21,14 +21,20 @@ function getComputerChoice(){
 console.log(getComputerChoice()); // returns computerChoice into the console
 
 function playRound(computerSelection, playerSelection){
+    
+    computerSelection = computerSelection.toLowerCase();
+    playerSelection = playerSelection.toLowerCase();
+    
+    if (playerSelection.toLowerCase() === computerSelection.toLowerCase()){}
 
 }
 
-let playerSelection = prompt("Rock, Paper, or Scissors?");
-let computerSelection = getComputerChoice();
+let playGame = prompt("Would you like to play Rock, Paper, Scissors?");
+if (playGame.toLowerCase() === "yes"){
 
-while (playerSelection.toLowerCase() === computerSelection.toLowerCase()){
-    playerSelection = prompt("Play again: ");
+    playerSelection = prompt("Rock, Paper, or Scissors?");
     computerSelection = getComputerChoice();
+    
 }
+
 
