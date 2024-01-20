@@ -60,6 +60,22 @@ function playRound(computerSelection, playerSelection){
     return result;
 }
 
+function game(){
+    
+    let computerScore = 0;
+    let playerScore = 0;
+
+    playerSelection = prompt("Rock, Paper, or Scissors?");
+    computerSelection = getComputerChoice();
+
+    console.log("You choose " + playerSelection);
+    console.log("Computer chooses " + computerSelection);
+    console.log(playRound(computerSelection, playerSelection));
+
+    playAgain = prompt("Would you like to play again?");
+
+}
+
 let playGame = prompt("Would you like to play Rock, Paper, Scissors?");
 let playAgain = "";
 let playerSelection = "";
@@ -68,12 +84,7 @@ let computerSelection = "";
 if (playGame.toLowerCase() === "yes"){
 
     do {
-        playerSelection = prompt("Rock, Paper, or Scissors?");
-        computerSelection = getComputerChoice();
-
-        console.log(playRound(computerSelection, playerSelection));
-
-        playAgain = prompt("Would you like to play again?");
+        game();
     }
     while (playAgain.toLowerCase() === "yes");
 }
