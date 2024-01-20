@@ -21,11 +21,27 @@ function getComputerChoice(){
 console.log(getComputerChoice()); // returns computerChoice into the console
 
 function playRound(computerSelection, playerSelection){
+
+    let result;
     
     computerSelection = computerSelection.toLowerCase();
     playerSelection = playerSelection.toLowerCase();
-    
-    if (playerSelection.toLowerCase() === computerSelection.toLowerCase()){}
+
+    if (playerSelection === computerSelection){
+        result = "It's a draw!";
+    }
+
+    if (playerSelection === "rock"){
+
+    }
+
+    if (playerSelection === "paper"){
+
+    }
+
+    if (playerSelection === "scissors"){
+        
+    }
 
 }
 
