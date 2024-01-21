@@ -2,7 +2,7 @@ function getComputerChoice(){
     
     let randomNumber = Math.floor((Math.random() * 10) + 1);
     // computerChoice is assigned a randomly generated number between 1 and 10
-    while (randomNumber != 1 && randomNumber != 2 && randomNumber != 3){
+    while (randomNumber > 3){
     // this ensures the number generated is between 1 and 3
         randomNumber = Math.floor((Math.random() * 10) + 1);
     }
@@ -68,22 +68,20 @@ function playRound(computerSelection, playerSelection){
 
 function game(){
 
-    playerSelection = prompt("Rock, Paper, or Scissors?");
-    computerSelection = getComputerChoice();
+    let playerSelection = prompt("Rock, Paper, or Scissors?");
+    let computerSelection = getComputerChoice();
 
-    console.log("You choose " + playerSelection);
-    console.log("Computer chooses " + computerSelection);
+    console.log("You chose " + playerSelection);
+    console.log("Computer chose " + computerSelection);
     console.log(playRound(computerSelection, playerSelection));
     console.log("Computer " + computerScore + ": Player " + playerScore);
 
 }
 
-let playGame = prompt("Would you like to play Rock, Paper, Scissors?");
-let playAgain = "";
-let playerSelection = "";
-let computerSelection = "";
 let computerScore = 0;
 let playerScore = 0;
+
+let playGame = prompt("Would you like to play Rock, Paper, Scissors?");
 
 if (playGame.toLowerCase() === "yes"){
 
