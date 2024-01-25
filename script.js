@@ -100,10 +100,7 @@ let playGame = prompt("Would you like to play Rock, Paper, Scissors?");
 
 if (playGame.toLowerCase() === "yes"){
 
-    do {
         game();
-    }
-    while (computerScore != 3 && playerScore != 3);
 
     if (computerScore > playerScore){
         console.log("Computer wins " + computerScore + "-" + playerScore);
