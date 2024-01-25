@@ -107,6 +107,17 @@ rockBtn.addEventListener('click', () => {
 
     playerCounter.textContent = playerScore;
     computerCounter.textContent = computerScore;
+
+    if (playerScore === 5) {
+        let resultPara = document.createElement('p');
+        resultPara.textContent = "Player wins !";
+        display.appendChild(resultPara);
+    }
+    else if (computerScore === 5) {
+        let resultPara = document.createElement('p');
+        resultPara.textContent = "Computer wins !";
+        display.appendChild(resultPara);
+    }
 });
 
 paperBtn.addEventListener('click', () => {
@@ -119,6 +130,17 @@ paperBtn.addEventListener('click', () => {
 
     playerCounter.textContent = playerScore;
     computerCounter.textContent = computerScore;
+
+    if (playerScore === 5) {
+        let resultPara = document.createElement('p');
+        resultPara.textContent = "Player wins !";
+        display.appendChild(resultPara);
+    }
+    else if (computerScore === 5) {
+        let resultPara = document.createElement('p');
+        resultPara.textContent = "Computer wins !";
+        display.appendChild(resultPara);
+    }
 });
 
 scissorsBtn.addEventListener('click', () => {
@@ -132,6 +154,17 @@ scissorsBtn.addEventListener('click', () => {
 
     playerCounter.textContent = playerScore;
     computerCounter.textContent = computerScore;
+
+    if (playerScore === 5) {
+        let resultPara = document.createElement('p');
+        resultPara.textContent = "Player wins !";
+        display.appendChild(resultPara);
+    }
+    else if (computerScore === 5) {
+        let resultPara = document.createElement('p');
+        resultPara.textContent = "Computer wins !";
+        display.appendChild(resultPara);
+    }
 });
 
 
