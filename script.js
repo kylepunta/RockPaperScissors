@@ -96,11 +96,7 @@ function game(){
 let computerScore = 0;
 let playerScore = 0;
 
-let playGame = prompt("Would you like to play Rock, Paper, Scissors?");
-
-if (playGame.toLowerCase() === "yes"){
-
-        game();
+game();
 
     if (computerScore > playerScore){
         console.log("Computer wins " + computerScore + "-" + playerScore);
@@ -108,6 +104,6 @@ if (playGame.toLowerCase() === "yes"){
     else if (playerScore > computerScore){
         console.log("Player wins " + playerScore + "-" + computerScore);
     }
-}
+
 
 
