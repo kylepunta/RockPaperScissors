@@ -26,42 +26,40 @@ function playRound(computerSelection, playerSelection){
     computerSelection = computerSelection.toLowerCase();
     playerSelection = playerSelection.toLowerCase();
 
-    if (playerSelection === computerSelection){
-        result = "It's a draw!";
-    }
+    switch (playerSelection) {
+        case "rock":
+                    switch (computerSelection) {
 
-    if (playerSelection === "rock"){
+                        case "rock":
+                                    break;
+                        case "paper":
+                                    break;
+                        case "scissors":
+                                    break;
+                    }
+                    break;
+        case "paper":
+                    switch (computerSelection) {
 
-        if (computerSelection === "paper"){
-            result = "You lose! Paper beats rock.";
-            computerScore++;
-        }
-        if (computerSelection === "scissors"){
-            result = "You win! Rock beats scissors.";
-            playerScore++;
-        }
-    }
-
-    if (playerSelection === "paper"){
-        if (computerSelection === "rock"){
-            result = "You win! Paper beats rock.";
-            playerScore++;
-        }
-        if (computerSelection === "scissors"){
-            result = "You lose! Scissors beats paper.";
-            computerScore++;
-        }
-    }
-
-    if (playerSelection === "scissors"){
-        if (computerSelection === "rock"){
-            result = "You lose! Rock beats scissors.";
-            computerScore++;
-        }
-        if (computerSelection === "paper"){
-            result = "You win! Scissors beats paper.";
-            playerScore++;
-        }
+                        case "rock":
+                                    break;
+                        case "paper":
+                                    break;
+                        case "scissors":
+                                    break;
+                    }
+                    break;
+        case "scissors":
+                    switch (computerSelection) {
+                        
+                        case "rock":
+                                    break;
+                        case "paper":
+                                    break;
+                        case "scissors":
+                                    break;
+                    }
+                    break;
     }
 
     return result;
