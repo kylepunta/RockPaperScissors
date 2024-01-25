@@ -1,18 +1,16 @@
 function getComputerChoice(){
     
-    let randomNumber = Math.floor((Math.random() * 10) + 1);
-    // computerChoice is assigned a randomly generated number between 1 and 10
-    while (randomNumber > 3){
-    // this ensures the number generated is between 1 and 3
-        randomNumber = Math.floor((Math.random() * 10) + 1);
-    }
+    let computerChoice;
+    let randomNumber = Math.floor((Math.random() * 3) + 1);
+    // computerChoice is assigned a randomly generated number between 1 and 3
 
-    if (randomNumber === 1){
-        computerChoice = "Rock"; // computerChoice is assigned rock 
-    } else if (randomNumber === 2){
-        computerChoice = "Paper"; // computerChoice is assigned paper
-    } else if (randomNumber === 3){
-        computerChoice = "Scissors"; // computerChoice is assigned scissors
+    switch (randomNumber) {
+        case 1:
+                computerChoice = "Rock";
+        case 2:
+                computerChoice = "Paper";
+        case 3:
+                computerChoice = "Scissors";
     }
 
     return computerChoice; // computerChoice's string value is returned
