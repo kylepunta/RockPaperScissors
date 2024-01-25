@@ -36,9 +36,11 @@ function playRound(computerSelection, playerSelection){
                                     break;
                         case "paper":
                                     result = "You lose. Paper beats rock.";
+                                    computerScore++;
                                     break;
                         case "scissors":
                                     result = "You win! Rock beats scissors.";
+                                    playerScore++;
                                     break;
                     }
                     break;
@@ -47,12 +49,14 @@ function playRound(computerSelection, playerSelection){
 
                         case "rock":
                                     result = "You win! Paper beats rock.";
+                                    playerScore++;
                                     break;
                         case "paper":
                                     result = "It's a draw!";
                                     break;
                         case "scissors":
                                     result = "You lose. Scissors beats paper.";
+                                    computerScore++;
                                     break;
                     }
                     break;
@@ -61,9 +65,11 @@ function playRound(computerSelection, playerSelection){
 
                         case "rock":
                                     result = "You lose. Rock beats scissors.";
+                                    computerScore++;
                                     break;
                         case "paper":
                                     result = "You win! Scissors beats paper.";
+                                    playerScore++;
                                     break;
                         case "scissors":
                                     result = "It's a draw!";
