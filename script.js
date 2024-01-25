@@ -81,8 +81,8 @@ function playRound(playerSelection, computerSelection){
     return result;
 }
 
-let computerScore = 0;
 let playerScore = 0;
+let computerScore = 0;
 let computerChoice;
 let roundResult;
 const ROCK = 'rock';
@@ -92,23 +92,46 @@ const SCISSORS = 'scissors';
 let rockBtn = document.querySelector('.rock');
 let paperBtn = document.querySelector('.paper');
 let scissorsBtn = document.querySelector('.scissors');
+let display = document.querySelector('.display');
+let list = document.querySelector('ul');
+let playerCounter = document.querySelector('.player-score');
+let computerCounter = document.querySelector('.computer-score');
 
 rockBtn.addEventListener('click', () => {
     computerChoice = getComputerChoice();
     roundResult = playRound(ROCK, computerChoice);
-    console.log(roundResult);
+
+    let resultItem = document.createElement('li');
+    resultItem.textContent = roundResult;
+    list.appendChild(resultItem);
+
+    playerCounter.textContent = playerScore;
+    computerCounter.textContent = computerScore;
 });
 
 paperBtn.addEventListener('click', () => {
     computerChoice = getComputerChoice();
     roundResult = playRound(PAPER, computerChoice);
-    console.log(roundResult);
+
+    let resultItem = document.createElement('li');
+    resultItem.textContent = roundResult;
+    list.appendChild(resultItem);
+
+    playerCounter.textContent = playerScore;
+    computerCounter.textContent = computerScore;
 });
 
 scissorsBtn.addEventListener('click', () => {
     computerChoice = getComputerChoice();
     roundResult = playRound(SCISSORS, computerChoice);
-    console.log(roundResult);
+
+    
+    let resultItem = document.createElement('li');
+    resultItem.textContent = roundResult;
+    list.appendChild(resultItem);
+
+    playerCounter.textContent = playerScore;
+    computerCounter.textContent = computerScore;
 });
 
 
