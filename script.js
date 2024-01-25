@@ -27,14 +27,18 @@ function playRound(computerSelection, playerSelection){
     playerSelection = playerSelection.toLowerCase();
 
     switch (playerSelection) {
+
         case "rock":
                     switch (computerSelection) {
 
                         case "rock":
+                                    result = "It's a draw!";
                                     break;
                         case "paper":
+                                    result = "You lose. Paper beats rock.";
                                     break;
                         case "scissors":
+                                    result = "You win! Rock beats scissors.";
                                     break;
                     }
                     break;
@@ -42,21 +46,27 @@ function playRound(computerSelection, playerSelection){
                     switch (computerSelection) {
 
                         case "rock":
+                                    result = "You win! Paper beats rock.";
                                     break;
                         case "paper":
+                                    result = "It's a draw!";
                                     break;
                         case "scissors":
+                                    result = "You lose. Scissors beats paper.";
                                     break;
                     }
                     break;
         case "scissors":
                     switch (computerSelection) {
-                        
+
                         case "rock":
+                                    result = "You lose. Rock beats scissors.";
                                     break;
                         case "paper":
+                                    result = "You win! Scissors beats paper.";
                                     break;
                         case "scissors":
+                                    result = "It's a draw!";
                                     break;
                     }
                     break;
